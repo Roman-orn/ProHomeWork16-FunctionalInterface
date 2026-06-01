@@ -16,10 +16,15 @@ public class Main {
         int sumNum = mathOperation.operate(2, 3);
         System.out.println(sumNum);
 
-        //Exercise 2
-        StringManipulator manipulator = s -> s.toUpperCase();
-        String textManipul = manipulator.upper("hello!");
-        System.out.println(textManipul);
+        //Exercise 2 UpperCase
+        StringManipulator manipulatorUp = s -> s.toUpperCase();
+        String textToUpperCase = manipulatorUp.manipulator("hello!");
+        System.out.println(textToUpperCase);
+
+        //Exercise 2 LowerCase
+        StringManipulator manipulatorLow = String::toLowerCase;
+        String textToLowerCase = manipulatorLow.manipulator("hELLo!");
+        System.out.println(textToLowerCase);
 
         //Exercise 3
         Function<String, Integer> function = StringListProcessor::countUppercase;
